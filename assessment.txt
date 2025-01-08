@@ -1,0 +1,39 @@
+Give me some idea on what is a Data type. What are Primitive Data types and Non-Primitive Data types. Explain with some examples.
+Ans-A data type defines the type of data a variable can hold in a programming language. It specifies the kind of value that a variable can store and how the computer should interpret that data. For example, a data type determines whether a variable stores a number, a character, or a true/false value.
+
+Data types are broadly categorized into two types:
+
+Primitive Data Types
+Non-Primitive Data Types
+1. Primitive Data Types
+These are the most basic data types provided by a programming language. They are predefined and represent a single value. Examples of primitive data types include:
+
+Common Primitive Data Types:
+Integer (int): Represents whole numbers.
+Example: int age = 25;
+
+Floating Point (float, double): Represents decimal numbers.
+Example: float price = 19.99;
+double pi = 3.14159;
+
+Character (char): Represents a single character.
+Example: char grade = 'A';
+
+Boolean (bool): Represents true or false values.
+Example: bool isPassed = true;
+
+String (in some languages, it is considered primitive, like in Python and JavaScript): Represents a sequence of characters.
+Example: string name = "Alice";
+
+2. Non-Primitive Data Types
+These are more complex and are derived from primitive data types. They can store multiple values or a collection of data. Examples include:
+
+Common Non-Primitive Data Types:
+Arrays: A collection of elements of the same type.
+Example: int[] numbers = {1, 2, 3, 4, 5};
+
+Classes and Objects: Represent real-world entities with attributes and behaviors.
+Strings (in some languages like Java, it's non-primitive):
+Example: String greeting = "Hello, World!";
+
+Lists, Sets, and Maps: Dynamic collections of data.
