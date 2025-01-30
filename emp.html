@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #b3adad;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #cecbcb;
+        }
+    </style>
+</head>
+<body>
+    <h2>Employee Details</h2>
+    <div id="table-container"></div>
+
+    <script>
+        const employees = [
+            {
+                empId: 101,
+                empName: "John Doe",
+                empCompany: "Accenture",
+                empSalary: 50000,
+                empAddress: { empCity: "New York", empArea: "Downtown" }
+            },
+            {
+                empId: 102,
+                empName: "Jane Smith",
+                empCompany: "Google",
+                empSalary: 60000,
+                empAddress: { empCity: "Los Angeles", empArea: "Beverly Hills" }
+            },
+            {
+                empId: 103,
+                empName: "Sam Wilson",
+                empCompany: "Amazon",
+                empSalary: 70000,
+                empAddress: { empCity: "Chicago", empArea: "Lincoln Park" }
+            }
+        ];
+
+        function generateTable(data) {
+            const table = document.createElement("table");
+
+            // Create table headers
+            const thead = document.createElement("thead");
+            const headerRow = document.createElement("tr");
+            const headers = ["Emp ID", "Name", "Company", "Salary", "City", "Area"];
+
+            headers.forEach(headerText => {
+                const th = document.createElement("th");
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create table body
+            const tbody = document.createElement("tbody");
+
+            data.forEach(emp => {
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${emp.empId}</td>
+                    <td>${emp.empName}</td>
+                    <td>${emp.empCompany}</td>
+                    <td>${emp.empSalary}</td>
+                    <td>${emp.empAddress.empCity}</td>
+                    <td>${emp.empAddress.empArea}</td>
+                `;
+
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+
+            return table;
+        }
+
+        document.getElementById("table-container").appendChild(generateTable(employees));
+    </script>
+    <body>
+        <div id="table-container"></div>
+        <script src="./emp.js"></script>
+    
+    
+    </body>
+    
+</body>
+</html>
